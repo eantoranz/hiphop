@@ -43,6 +43,7 @@
 #include "output.inc"
 #include "pdo.inc"
 #include "posix.inc"
+#include "postgresql.inc"
 #include "preg.inc"
 #include "process.inc"
 #include "reflection.inc"

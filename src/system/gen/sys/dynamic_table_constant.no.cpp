@@ -1287,6 +1287,46 @@ extern const StaticString k_PEAR_INSTALL_DIR;
 extern const int64 k_PHPMCC_NEW_HANDLE;
 extern const int64 k_PHPMCC_USED_FAST_PATH;
 extern const int64 k_PHPMCC_USED_SLOW_PATH;
+extern const int64 k_PGSQL_CONV_IGNORE_NOT_NULL;
+extern const int64 k_PGSQL_DML_ASYNC;
+extern const int64 k_PGSQL_DML_EXEC;
+extern const int64 k_PGSQL_DML_NO_CONV;
+extern const int64 k_PGSQL_DML_STRING;
+extern const int64 k_PGSQL_ASSOC;
+extern const int64 k_PGSQL_BAD_RESPONSE;
+extern const int64 k_PGSQL_BOTH;
+extern const int64 k_PGSQL_COMMAND_OK;
+extern const int64 k_PGSQL_CONNECTION_BAD;
+extern const int64 k_PGSQL_CONNECTION_OK;
+extern const int64 k_PGSQL_CONNECT_FORCE_NEW;
+extern const int64 k_PGSQL_CONV_FORCE_NULL;
+extern const int64 k_PGSQL_CONV_IGNORE_DEFAULT;
+extern const int64 k_PGSQL_COPY_IN;
+extern const int64 k_PGSQL_COPY_OUT;
+extern const int64 k_PGSQL_DIAG_CONTEXT;
+extern const int64 k_PGSQL_DIAG_INTERNAL_POSITION;
+extern const int64 k_PGSQL_DIAG_INTERNAL_QUERY;
+extern const int64 k_PGSQL_DIAG_MESSAGE_DETAIL;
+extern const int64 k_PGSQL_DIAG_MESSAGE_HINT;
+extern const int64 k_PGSQL_DIAG_MESSAGE_PRIMARY;
+extern const int64 k_PGSQL_DIAG_SEVERITY;
+extern const int64 k_PGSQL_DIAG_SOURCE_FILE;
+extern const int64 k_PGSQL_DIAG_SOURCE_FUNCTION;
+extern const int64 k_PGSQL_DIAG_SOURCE_LINE;
+extern const int64 k_PGSQL_DIAG_SQLSTATE;
+extern const int64 k_PGSQL_DIAG_STATEMENT_POSITION;
+extern const int64 k_PGSQL_EMPTY_QUERY;
+extern const int64 k_PGSQL_ERRORS_DEFAULT;
+extern const int64 k_PGSQL_ERRORS_TERSE;
+extern const int64 k_PGSQL_ERRORS_VERBOSE;
+extern const int64 k_PGSQL_FATAL_ERROR;
+extern const int64 k_PGSQL_NONFATAL_ERROR;
+extern const int64 k_PGSQL_NUM;
+extern const int64 k_PGSQL_SEEK_CUR;
+extern const int64 k_PGSQL_SEEK_END;
+extern const int64 k_PGSQL_SEEK_SET;
+extern const int64 k_PGSQL_STATUS_LONG;
+extern const int64 k_PGSQL_STATUS_STRING;
 extern const int64 k_PHP_BINARY_READ;
 extern const StaticString k_PHP_BINDIR;
 extern const StaticString k_PHP_CONFIG_FILE_PATH;
@@ -2232,6 +2272,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x3BC5DBA5FE7680DELL, k_U_STATE_OLD_WARNING, "U_STATE_OLD_WARNING");
       break;
     case 223:
+      HASH_RETURN(0x746B2CD907BA60DFLL, k_PGSQL_DIAG_MESSAGE_PRIMARY, "PGSQL_DIAG_MESSAGE_PRIMARY");
       HASH_RETURN(0x784F8EB628DD60DFLL, k_U_FMT_PARSE_ERROR_START, "U_FMT_PARSE_ERROR_START");
       break;
     case 225:
@@ -2303,6 +2344,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 299:
       HASH_RETURN(0x4BF499AE6A95A12BLL, k_MCC_SERVER_UP, "MCC_SERVER_UP");
       HASH_RETURN(0x1EF47D204457212BLL, k_MW_PerceptualIntent, "MW_PerceptualIntent");
+      break;
+    case 306:
+      HASH_RETURN(0x0389B388EF7FE132LL, k_PGSQL_SEEK_SET, "PGSQL_SEEK_SET");
       break;
     case 310:
       HASH_RETURN(0x5CB625D96DC44136LL, k_GLOBAL_SYMBOL_DYNAMIC_CONSTANT, "GLOBAL_SYMBOL_DYNAMIC_CONSTANT");
@@ -2572,6 +2616,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 678:
       HASH_RETURN(0x455D174A426D42A6LL, k_SOAP_RPC, "SOAP_RPC");
+      break;
+    case 683:
+      HASH_RETURN(0x31B692D8284562ABLL, k_PGSQL_TRANSACTION_INERROR, "PGSQL_TRANSACTION_INERROR");
       break;
     case 688:
       HASH_RETURN(0x35ED63A6253462B0LL, k_CURLOPT_FTP_CREATE_MISSING_DIRS, "CURLOPT_FTP_CREATE_MISSING_DIRS");
@@ -2864,6 +2911,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 1056:
       HASH_RETURN(0x1640565007A90420LL, k_DOM_NO_MODIFICATION_ALLOWED_ERR, "DOM_NO_MODIFICATION_ALLOWED_ERR");
       break;
+    case 1061:
+      HASH_RETURN(0x2F953B491A5CA425LL, k_PGSQL_DIAG_SOURCE_FUNCTION, "PGSQL_DIAG_SOURCE_FUNCTION");
+      break;
     case 1067:
       HASH_RETURN(0x1467C96E65B5642BLL, k_XML_ERROR_MISPLACED_XML_PI, "XML_ERROR_MISPLACED_XML_PI");
       break;
@@ -3091,6 +3141,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 1428:
       HASH_RETURN(0x0939FC6C2398A594LL, k_SOCKET_ECHRNG, "SOCKET_ECHRNG");
       break;
+    case 1431:
+      HASH_RETURN(0x010EDB7BB68A6597LL, k_PGSQL_BOTH, "PGSQL_BOTH");
+      break;
     case 1434:
       HASH_RETURN(0x7B9C1DEF8C78259ALL, k_SOCKET_ECONNREFUSED, "SOCKET_ECONNREFUSED");
       break;
@@ -3285,6 +3338,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x0809501EC57106B4LL, k_IMG_FILTER_COLORIZE, "IMG_FILTER_COLORIZE");
       HASH_RETURN(0x31E9FAA3813766B4LL, k_MCC_DGRAM_TMO_WEIGHT, "MCC_DGRAM_TMO_WEIGHT");
       break;
+    case 1721:
+      HASH_RETURN(0x7320EBA6DAEE66B9LL, k_PGSQL_DML_NO_CONV, "PGSQL_DML_NO_CONV");
+      break;
     case 1739:
       HASH_RETURN(0x2E18D3023D58A6CBLL, k_OPENSSL_SSLV23_PADDING, "OPENSSL_SSLV23_PADDING");
       break;
@@ -3341,6 +3397,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x4983BEA1AE5F070ELL, k_MW_SpreadPreview, "MW_SpreadPreview");
       break;
     case 1814:
+      HASH_RETURN(0x0518BAB3439DA716LL, k_PGSQL_NUM, "PGSQL_NUM");
       HASH_RETURN(0x6BE145E729972716LL, k_U_INVARIANT_CONVERSION_ERROR, "U_INVARIANT_CONVERSION_ERROR");
       break;
     case 1820:
@@ -3413,6 +3470,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 1924:
       HASH_RETURN(0x7A4B8593A23CC784LL, k_T_END_HEREDOC, "T_END_HEREDOC");
+      break;
+    case 1925:
+      HASH_RETURN(0x53963DB2EEB02785LL, k_PGSQL_CONNECTION_OK, "PGSQL_CONNECTION_OK");
       break;
     case 1929:
       HASH_RETURN(0x3F36CD494FD4C789LL, k_SIGHUP, "SIGHUP");
@@ -3579,6 +3639,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 2175:
       HASH_RETURN(0x5AAA6387AA31687FLL, k_DOM_INUSE_ATTRIBUTE_ERR, "DOM_INUSE_ATTRIBUTE_ERR");
       HASH_RETURN(0x27367C3E2B2DA87FLL, k_SQLT_LNG, "SQLT_LNG");
+      HASH_RETURN(0x3B80C5DB7B5AE87FLL, k_PGSQL_DML_ASYNC, "PGSQL_DML_ASYNC");
       break;
     case 2178:
       HASH_RETURN(0x0120F1CB87C56882LL, k_ASSERT_BAIL, "ASSERT_BAIL");
@@ -4266,6 +4327,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 3144:
       HASH_RETURN(0x32B08E6625326C48LL, k_XHPROF_FLAGS_MALLOC, "XHPROF_FLAGS_MALLOC");
       break;
+    case 3156:
+      HASH_RETURN(0x3803A25D7ACE0C54LL, k_PGSQL_DML_EXEC, "PGSQL_DML_EXEC");
+      break;
     case 3157:
       HASH_RETURN(0x2EF4675A93480C55LL, k_CURLOPT_WRITEHEADER, "CURLOPT_WRITEHEADER");
       break;
@@ -4285,8 +4349,14 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 3186:
       HASH_RETURN(0x4D52E901652F0C72LL, k_SO_RCVBUF, "SO_RCVBUF");
       break;
+    case 3190:
+      HASH_RETURN(0x312D4AF8D9640C76LL, k_PGSQL_CONV_FORCE_NULL, "PGSQL_CONV_FORCE_NULL");
+      break;
     case 3208:
       HASH_RETURN(0x7BC051800FB96C88LL, k_SOCKET_ETOOMANYREFS, "SOCKET_ETOOMANYREFS");
+      break;
+    case 3211:
+      HASH_RETURN(0x12A096683574EC8BLL, k_PGSQL_DIAG_SQLSTATE, "PGSQL_DIAG_SQLSTATE");
       break;
     case 3217:
       HASH_RETURN(0x7935065FD925CC91LL, k_T_DEFAULT, "T_DEFAULT");
@@ -4495,10 +4565,14 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 3499:
       HASH_RETURN(0x7D6F66A55B084DABLL, k_E_STRICT, "E_STRICT");
       break;
+    case 3501:
+      HASH_RETURN(0x1DA9BB1998F60DADLL, k_PGSQL_EMPTY_QUERY, "PGSQL_EMPTY_QUERY");
+      break;
     case 3503:
       HASH_RETURN(0x2BC33F509A5AADAFLL, k_CURLAUTH_DIGEST, "CURLAUTH_DIGEST");
       break;
     case 3505:
+      HASH_RETURN(0x6D32E16DB4A22DB1LL, k_PGSQL_SEEK_END, "PGSQL_SEEK_END");
       HASH_RETURN(0x43EA4A6192E40DB1LL, k_MW_FileOpenFatalError, "MW_FileOpenFatalError");
       break;
     case 3506:
@@ -4607,6 +4681,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x1432AE6BD6E60E49LL, k_STREAM_SERVER_BIND, "STREAM_SERVER_BIND");
       break;
     case 3661:
+      HASH_RETURN(0x7330ACCA4FA9AE4DLL, k_PGSQL_STATUS_LONG, "PGSQL_STATUS_LONG");
       HASH_RETURN(0x707379159AEB4E4DLL, k_CURLOPT_HTTPPROXYTUNNEL, "CURLOPT_HTTPPROXYTUNNEL");
       break;
     case 3663:
@@ -4653,6 +4728,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 3726:
       HASH_RETURN(0x1740AE3316108E8ELL, k_SIGABRT, "SIGABRT");
+      break;
+    case 3737:
+      HASH_RETURN(0x798F568FAC320E99LL, k_PGSQL_SEEK_CUR, "PGSQL_SEEK_CUR");
       break;
     case 3738:
       HASH_RETURN(0x4D0D7C94AB774E9ALL, k_CURLOPT_QUOTE, "CURLOPT_QUOTE");
@@ -4793,6 +4871,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x0415BB163D910F2DLL, k_MCRYPT_RC6, "MCRYPT_RC6");
       break;
     case 3887:
+      HASH_RETURN(0x7CA5073BC0692F2FLL, k_PGSQL_COPY_IN, "PGSQL_COPY_IN");
       HASH_RETURN(0x23654A24957D4F2FLL, k_T_WHILE, "T_WHILE");
       break;
     case 3889:
@@ -4956,6 +5035,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x2DFDB60E31F90FFELL, k_STREAM_MUST_SEEK, "STREAM_MUST_SEEK");
       break;
     case 4095:
+      HASH_RETURN(0x2863BF389D02CFFFLL, k_PGSQL_ERRORS_TERSE, "PGSQL_ERRORS_TERSE");
       HASH_RETURN(0x1CFC3805FEC22FFFLL, k_LOG_NOTICE, "LOG_NOTICE");
       break;
     case 4103:
@@ -5003,6 +5083,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x274F7D36BCA0F046LL, k_FT_PREFETCHTEXT, "FT_PREFETCHTEXT");
       HASH_RETURN(0x24E35407C7ECB046LL, k_LDAP_DEREF_FINDING, "LDAP_DEREF_FINDING");
       HASH_RETURN(0x58333A9A1EAD5046LL, k_OCI_DTYPE_LOB, "OCI_DTYPE_LOB");
+      break;
+    case 4167:
+      HASH_RETURN(0x11E858F65C8ED047LL, k_PGSQL_COPY_OUT, "PGSQL_COPY_OUT");
       break;
     case 4172:
       HASH_RETURN(0x63640164CF34D04CLL, k_U_VARIABLE_RANGE_OVERLAP, "U_VARIABLE_RANGE_OVERLAP");
@@ -5285,6 +5368,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x089D261CA15031D8LL, k_SOAP_AUTHENTICATION_BASIC, "SOAP_AUTHENTICATION_BASIC");
       break;
     case 4570:
+      HASH_RETURN(0x57B5C258442611DALL, k_PGSQL_TRANSACTION_UNKNOWN, "PGSQL_TRANSACTION_UNKNOWN");
       HASH_RETURN(0x471A3A9CAE2EB1DALL, k_STREAM_IPPROTO_IP, "STREAM_IPPROTO_IP");
       break;
     case 4571:
@@ -5539,6 +5623,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 4901:
       HASH_RETURN(0x774A979412A0B325LL, k_POSIX_S_IFREG, "POSIX_S_IFREG");
       break;
+    case 4908:
+      HASH_RETURN(0x7E3A62439D24532CLL, k_PGSQL_TRANSACTION_ACTIVE, "PGSQL_TRANSACTION_ACTIVE");
+      break;
     case 4910:
       HASH_RETURN(0x6A8D384DC583332ELL, k_MW_SwirlPreview, "MW_SwirlPreview");
       break;
@@ -5547,6 +5634,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 4913:
       HASH_RETURN(0x399E19BFA1EF7331LL, k_CURLM_BAD_EASY_HANDLE, "CURLM_BAD_EASY_HANDLE");
+      break;
+    case 4914:
+      HASH_RETURN(0x2B4688B8EB63B332LL, k_PGSQL_COMMAND_OK, "PGSQL_COMMAND_OK");
       break;
     case 4917:
       HASH_RETURN(0x1AA4CD54F6D53335LL, k_STREAM_NOTIFY_FILE_SIZE_IS, "STREAM_NOTIFY_FILE_SIZE_IS");
@@ -5598,6 +5688,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x30EB29BDEA5C136CLL, k_SOCKET_ENOTUNIQ, "SOCKET_ENOTUNIQ");
       break;
     case 4973:
+      HASH_RETURN(0x29A92F4FACB5736DLL, k_PGSQL_DIAG_SOURCE_FILE, "PGSQL_DIAG_SOURCE_FILE");
       HASH_RETURN(0x228025D470DE736DLL, k_MW_CharcoalDrawingPreview, "MW_CharcoalDrawingPreview");
       break;
     case 4978:
@@ -5656,6 +5747,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 5063:
       HASH_RETURN(0x59A5EEC7B53673C7LL, k_MW_DespecklePreview, "MW_DespecklePreview");
       break;
+    case 5065:
+      HASH_RETURN(0x2C559C3FB97813C9LL, k_PGSQL_ERRORS_DEFAULT, "PGSQL_ERRORS_DEFAULT");
+      break;
     case 5075:
       HASH_RETURN(0x5161581BF71593D3LL, k_SIGTERM, "SIGTERM");
       break;
@@ -5700,6 +5794,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 5145:
       HASH_RETURN(0x3515808C6B65B419LL, k_IMG_JPG, "IMG_JPG");
       break;
+    case 5148:
+      HASH_RETURN(0x1CBA757CBB5D141CLL, k_PGSQL_DIAG_SOURCE_LINE, "PGSQL_DIAG_SOURCE_LINE");
+      break;
     case 5149:
       HASH_RETURN(0x1E9C173187F3941DLL, k_U_BRK_MALFORMED_RULE_TAG, "U_BRK_MALFORMED_RULE_TAG");
       break;
@@ -5725,12 +5822,18 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 5187:
       HASH_RETURN(0x007A01CB4FC8B443LL, k_T_ENDWHILE, "T_ENDWHILE");
       break;
+    case 5188:
+      HASH_RETURN(0x227CC554FBC47444LL, k_PGSQL_DIAG_CONTEXT, "PGSQL_DIAG_CONTEXT");
+      break;
     case 5191:
       HASH_RETURN(0x2EB10EFD3490D447LL, k_MCRYPT_IDEA, "MCRYPT_IDEA");
       break;
     case 5193:
       HASH_RETURN(0x36ECFC6074D5F449LL, k_DOM_SYNTAX_ERR, "DOM_SYNTAX_ERR");
       HASH_RETURN(0x3214C18660AB1449LL, k_U_UNTERMINATED_QUOTE, "U_UNTERMINATED_QUOTE");
+      break;
+    case 5194:
+      HASH_RETURN(0x085271B9C4C6344ALL, k_PGSQL_ASSOC, "PGSQL_ASSOC");
       break;
     case 5213:
       HASH_RETURN(0x6FC496B3F19F345DLL, k_PHP_INT_MAX, "PHP_INT_MAX");
@@ -5793,6 +5896,7 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x46DB00B5F0A234A7LL, k_OCI_B_CFILEE, "OCI_B_CFILEE");
       break;
     case 5288:
+      HASH_RETURN(0x18C55A1EFCE074A8LL, k_PGSQL_DIAG_INTERNAL_POSITION, "PGSQL_DIAG_INTERNAL_POSITION");
       HASH_RETURN(0x0ECCE437F99674A8LL, k_SORTFROM, "SORTFROM");
       break;
     case 5289:
@@ -5851,6 +5955,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 5377:
       HASH_RETURN(0x56CF4A6CEAE2B501LL, k_CURLE_OPERATION_TIMEOUTED, "CURLE_OPERATION_TIMEOUTED");
+      break;
+    case 5381:
+      HASH_RETURN(0x63ACF1257816F505LL, k_PGSQL_DIAG_INTERNAL_QUERY, "PGSQL_DIAG_INTERNAL_QUERY");
       break;
     case 5384:
       HASH_RETURN(0x47650B1056B2F508LL, k_CURLFTPSSL_CONTROL, "CURLFTPSSL_CONTROL");
@@ -6090,6 +6197,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 5717:
       HASH_RETURN(0x577B9D2AD53EF655LL, k_MYSQLI_NO_DATA, "MYSQLI_NO_DATA");
       break;
+    case 5718:
+      HASH_RETURN(0x53D9B8049889F656LL, k_PGSQL_TRANSACTION_IDLE, "PGSQL_TRANSACTION_IDLE");
+      break;
     case 5722:
       HASH_RETURN(0x3A13EC9C59F4165ALL, k_PHP_OUTPUT_HANDLER_START, "PHP_OUTPUT_HANDLER_START");
       break;
@@ -6153,6 +6263,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 5803:
       HASH_RETURN(0x603174EB69B9D6ABLL, k_IMAGETYPE_SWF, "IMAGETYPE_SWF");
+      break;
+    case 5807:
+      HASH_RETURN(0x459C64B7C82796AFLL, k_PGSQL_CONNECT_FORCE_NEW, "PGSQL_CONNECT_FORCE_NEW");
       break;
     case 5819:
       HASH_RETURN(0x3CE71ED37919B6BBLL, k_U_INVALID_ID, "U_INVALID_ID");
@@ -6371,6 +6484,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 6145:
       HASH_RETURN(0x12BCEA0A7E8F1801LL, k_MCC_ARG_UDP_REPLY_PORTS, "MCC_ARG_UDP_REPLY_PORTS");
       break;
+    case 6148:
+      HASH_RETURN(0x6A6D5A2EA903F804LL, k_PGSQL_TRANSACTION_INTRANS, "PGSQL_TRANSACTION_INTRANS");
+      break;
     case 6150:
       HASH_RETURN(0x7D6001D0BFEE9806LL, k_MW_CoderWarning, "MW_CoderWarning");
       break;
@@ -6530,6 +6646,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 6373:
       HASH_RETURN(0x500C542C1FDC18E5LL, k_MW_UndefinedRule, "MW_UndefinedRule");
       break;
+    case 6385:
+      HASH_RETURN(0x60490EBD6FC298F1LL, k_PGSQL_DIAG_MESSAGE_DETAIL, "PGSQL_DIAG_MESSAGE_DETAIL");
+      break;
     case 6398:
       HASH_RETURN(0x76D357E7C04318FELL, k_SOAP_PERSISTENCE_SESSION, "SOAP_PERSISTENCE_SESSION");
       break;
@@ -6583,6 +6702,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 6467:
       HASH_RETURN(0x570CEAD6843E9943LL, k_MW_SubtractCompositeOp, "MW_SubtractCompositeOp");
+      break;
+    case 6469:
+      HASH_RETURN(0x3C48A69C36123945LL, k_PGSQL_DIAG_SEVERITY, "PGSQL_DIAG_SEVERITY");
       break;
     case 6470:
       HASH_RETURN(0x0EC74FD23BF5F946LL, k_XSD_POSITIVEINTEGER, "XSD_POSITIVEINTEGER");
@@ -6663,6 +6785,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 6577:
       HASH_RETURN(0x771F20A576A959B1LL, k_XSD_NORMALIZEDSTRING, "XSD_NORMALIZEDSTRING");
+      break;
+    case 6578:
+      HASH_RETURN(0x3667E2428F5339B2LL, k_PGSQL_CONV_IGNORE_DEFAULT, "PGSQL_CONV_IGNORE_DEFAULT");
       break;
     case 6591:
       HASH_RETURN(0x54DD7D6B4CCA79BFLL, k_CURLE_GOT_NOTHING, "CURLE_GOT_NOTHING");
@@ -6883,6 +7008,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 6863:
       HASH_RETURN(0x0ABBF2E321C47ACFLL, k_XSD_LONG, "XSD_LONG");
       break;
+    case 6867:
+      HASH_RETURN(0x3C29EEB3899CFAD3LL, k_PGSQL_TUPLES_OK, "PGSQL_TUPLES_OK");
+      break;
     case 6870:
       HASH_RETURN(0x435957770D3AFAD6LL, k_MW_SetEvaluateOperator, "MW_SetEvaluateOperator");
       break;
@@ -6925,6 +7053,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 6902:
       HASH_RETURN(0x3C7D2C061C055AF6LL, k_CURLOPT_CUSTOMREQUEST, "CURLOPT_CUSTOMREQUEST");
+      break;
+    case 6908:
+      HASH_RETURN(0x1871A226E54F9AFCLL, k_PGSQL_BAD_RESPONSE, "PGSQL_BAD_RESPONSE");
       break;
     case 6918:
       HASH_RETURN(0x68883FEECE26DB06LL, k_CURLINFO_SIZE_DOWNLOAD, "CURLINFO_SIZE_DOWNLOAD");
@@ -7084,6 +7215,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 7157:
       HASH_RETURN(0x42FC7F5C971F9BF5LL, k_CREDITS_QA, "CREDITS_QA");
+      break;
+    case 7159:
+      HASH_RETURN(0x15609F1DA460FBF7LL, k_PGSQL_DIAG_MESSAGE_HINT, "PGSQL_DIAG_MESSAGE_HINT");
       break;
     case 7167:
       HASH_RETURN(0x2FAE93A5FD06FBFFLL, k_SOCKET_ENOTCONN, "SOCKET_ENOTCONN");
@@ -7248,6 +7382,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
     case 7388:
       HASH_RETURN(0x52A1D147A2BF3CDCLL, k_IMAP_READTIMEOUT, "IMAP_READTIMEOUT");
       break;
+    case 7395:
+      HASH_RETURN(0x4B572A314F2F1CE3LL, k_PGSQL_NONFATAL_ERROR, "PGSQL_NONFATAL_ERROR");
+      break;
     case 7406:
       HASH_RETURN(0x3078202CA3F8DCEELL, k_TRUE, "TRUE");
       break;
@@ -7259,6 +7396,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 7415:
       HASH_RETURN(0x5EB4230441ED3CF7LL, k_PRIO_PROCESS, "PRIO_PROCESS");
+      break;
+    case 7417:
+      HASH_RETURN(0x7D6ED6A9B269FCF9LL, k_PGSQL_STATUS_STRING, "PGSQL_STATUS_STRING");
       break;
     case 7422:
       HASH_RETURN(0x4990A11193737CFELL, k_MW_MultiplyCompositeOp, "MW_MultiplyCompositeOp");
@@ -7312,6 +7452,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 7504:
       HASH_RETURN(0x5E2231652664BD50LL, k_U_MALFORMED_EXPONENTIAL_PATTERN, "U_MALFORMED_EXPONENTIAL_PATTERN");
+      break;
+    case 7505:
+      HASH_RETURN(0x7AD0FA1F6287BD51LL, k_PGSQL_DML_STRING, "PGSQL_DML_STRING");
       break;
     case 7511:
       HASH_RETURN(0x2BF259577D2BFD57LL, k_XML_ERROR_PARAM_ENTITY_REF, "XML_ERROR_PARAM_ENTITY_REF");
@@ -7417,6 +7560,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 7647:
       HASH_RETURN(0x5EDE310A750EBDDFLL, k_XML_ERROR_DUPLICATE_ATTRIBUTE, "XML_ERROR_DUPLICATE_ATTRIBUTE");
+      break;
+    case 7652:
+      HASH_RETURN(0x39A26CC7A9193DE4LL, k_PGSQL_DIAG_STATEMENT_POSITION, "PGSQL_DIAG_STATEMENT_POSITION");
       break;
     case 7653:
       HASH_RETURN(0x5ED04B226C6F5DE5LL, k_CURLE_RECV_ERROR, "CURLE_RECV_ERROR");
@@ -7553,10 +7699,14 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x72F3AC0339F5BE7BLL, k_U_MALFORMED_UNICODE_ESCAPE, "U_MALFORMED_UNICODE_ESCAPE");
       break;
     case 7804:
+      HASH_RETURN(0x590807D6DD4FBE7CLL, k_PGSQL_FATAL_ERROR, "PGSQL_FATAL_ERROR");
       HASH_RETURN(0x6FECD5B1F61F7E7CLL, k_MW_OptimizeType, "MW_OptimizeType");
       break;
     case 7812:
       HASH_RETURN(0x46C414938F663E84LL, k_UNKNOWN_TYPE, "UNKNOWN_TYPE");
+      break;
+    case 7816:
+      HASH_RETURN(0x6FB18F2BDDAEFE88LL, k_PGSQL_CONNECTION_BAD, "PGSQL_CONNECTION_BAD");
       break;
     case 7821:
       HASH_RETURN(0x587E1718D2E0BE8DLL, k_YESEXPR, "YESEXPR");
@@ -7809,6 +7959,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       HASH_RETURN(0x2F829788E900DFD5LL, k_ASSERT_CALLBACK, "ASSERT_CALLBACK");
       HASH_RETURN(0x291F7DAF09CA5FD5LL, k_MW_OptionFatalError, "MW_OptionFatalError");
       break;
+    case 8154:
+      HASH_RETURN(0x0F28B07D8C983FDALL, k_PGSQL_CONV_IGNORE_NOT_NULL, "PGSQL_CONV_IGNORE_NOT_NULL");
+      break;
     case 8165:
       HASH_RETURN(0x62D75B029DE29FE5LL, k_U_BRK_SEMICOLON_EXPECTED, "U_BRK_SEMICOLON_EXPECTED");
       break;
@@ -7824,6 +7977,9 @@ Variant get_builtin_constant(CStrRef name, bool error) {
       break;
     case 8177:
       HASH_RETURN(0x1A732B698F1B5FF1LL, k_MW_AnyStretch, "MW_AnyStretch");
+      break;
+    case 8187:
+      HASH_RETURN(0x26B0A7E96D579FFBLL, k_PGSQL_ERRORS_VERBOSE, "PGSQL_ERRORS_VERBOSE");
       break;
     default:
       break;

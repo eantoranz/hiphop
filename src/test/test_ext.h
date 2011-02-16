@@ -58,6 +58,7 @@
 #include <test/test_ext_output.h>
 #include <test/test_ext_pdo.h>
 #include <test/test_ext_posix.h>
+#include <test/test_ext_postgresql.h>
 #include <test/test_ext_preg.h>
 #include <test/test_ext_process.h>
 #include <test/test_ext_reflection.h>

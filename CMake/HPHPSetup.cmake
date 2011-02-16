@@ -1,6 +1,7 @@
 OPTION(INFINITE_LOOP_DETECTION "Enable Infinite Loop Detection" ON)
 OPTION(INFINITE_RECURSION_DETECTION "Enable Infinite Recursion Detection" ON)
 OPTION(REQUEST_TIMEOUT_DETECTION "Enable Timeout Detection" ON)
+add_definitions(-DENABLE_LATE_STATIC_BINDING=1)
 
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE "Release")

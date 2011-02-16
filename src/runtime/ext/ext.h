@@ -60,6 +60,7 @@
 #include <runtime/ext/profile/extprofile_output.h>
 #include <runtime/ext/profile/extprofile_pdo.h>
 #include <runtime/ext/profile/extprofile_posix.h>
+#include <runtime/ext/profile/extprofile_postgresql.h>
 #include <runtime/ext/profile/extprofile_preg.h>
 #include <runtime/ext/profile/extprofile_process.h>
 #include <runtime/ext/profile/extprofile_reflection.h>
