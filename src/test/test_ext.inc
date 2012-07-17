@@ -47,6 +47,7 @@ RUN_TESTSUITE(TestExtOptions);
 RUN_TESTSUITE(TestExtOutput);
 RUN_TESTSUITE(TestExtPdo);
 RUN_TESTSUITE(TestExtPosix);
+RUN_TESTSUITE(TestExtPostgresql);
 RUN_TESTSUITE(TestExtPreg);
 RUN_TESTSUITE(TestExtProcess);
 RUN_TESTSUITE(TestExtReflection);

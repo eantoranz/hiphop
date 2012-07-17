@@ -22,4 +22,8 @@
 #include <system/gen/sys/literal_strings_remap.h>
 #include <system/gen/sys/scalar_arrays_remap.h>
 
+// 4. Classes
+
+///////////////////////////////////////////////////////////////////////////////
+}
 #endif // __GENERATED_php_globals_constants_fw_hfdfa98a3__

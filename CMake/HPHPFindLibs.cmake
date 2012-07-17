@@ -37,6 +37,11 @@ if (MYSQL_UNIX_SOCK_ADDR)
   add_definitions(-DPHP_MYSQL_UNIX_SOCK_ADDR="${MYSQL_UNIX_SOCK_ADDR}")
 endif()
 
+# PostgreSQL checks
+find_package(PostgreSQL REQUIRED)
+include_directories(${POSTGRESQL_INCLUDE_DIR})
+link_directories(${POSTGRESL_LIB_DIR})
+
 # libmemcached checks
 find_package(Libmemcached REQUIRED)
 if (LIBMEMCACHED_VERSION VERSION_LESS "0.39")
@@ -333,6 +338,7 @@ macro(hphp_link target)
 
 	target_link_libraries(${target} ${Boost_LIBRARIES})
 	target_link_libraries(${target} ${MYSQL_CLIENT_LIBS})
+	target_link_libraries(${target} ${POSTGRESQL_LIB}) 
 	target_link_libraries(${target} ${PCRE_LIBRARY})
 	target_link_libraries(${target} ${ICU_LIBRARIES} ${ICU_I18N_LIBRARIES})
 	target_link_libraries(${target} ${LIBEVENT_LIB})

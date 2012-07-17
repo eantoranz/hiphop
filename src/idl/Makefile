@@ -37,6 +37,7 @@ lists: ../system/ext.inc ../test/test_ext.h ../test/test_ext.inc ../runtime/ext/
 $(EXT): $(EXT).idl.php idl.php base.php
 	@echo 'Generating files from $<...'
 	@echo ' --> ext_$@.h ext_$@.cpp'
+	@echo $(V) is V php idl.php cpp  $< ext_$@.h ext_$@.cpp
 	$(V)$(PHP) idl.php cpp  $< ext_$@.h ext_$@.cpp
 	@echo ' --> $@.inc'
 	$(V)$(PHP) idl.php inc  $< $@.inc

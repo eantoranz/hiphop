@@ -5,6 +5,7 @@ option(ENABLE_LATE_STATIC_BINDING "Enable Late Static Binding" ON)
 option(INFINITE_LOOP_DETECTION "Enable Infinite Loop Detection" ON)
 option(INFINITE_RECURSION_DETECTION "Enable Infinite Recursion Detection" ON)
 option(REQUEST_TIMEOUT_DETECTION "Enable Timeout Detection" ON)
+add_definitions(-DENABLE_LATE_STATIC_BINDING=1)
 
 option(ALWAYS_ASSERT "Enabled asserts in a release build" OFF)
 option(DEBUG_MEMORY_LEAK "Allow easier debugging of memory leaks" OFF)
