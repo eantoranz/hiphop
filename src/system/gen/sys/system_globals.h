@@ -95,13 +95,11 @@ extern const int64 k_JSON_HEX_TAG;
 extern const int64 k_JSON_NUMERIC_CHECK;
 extern const int64 k_JSON_UNESCAPED_SLASHES;
 extern const double k_NAN;
-<<<<<<< HEAD
 extern const int64 k_OPENSSL_RAW_DATA;
 extern const int64 k_OPENSSL_ZERO_PADDING;
 extern const int64 k_PAGELET_DONE;
 extern const int64 k_PAGELET_NOT_READY;
 extern const int64 k_PAGELET_READY;
-=======
 extern const int64 k_PGSQL_ASSOC;
 extern const int64 k_PGSQL_BAD_RESPONSE;
 extern const int64 k_PGSQL_BOTH;
@@ -143,7 +141,6 @@ extern const int64 k_PGSQL_TRANSACTION_INERROR;
 extern const int64 k_PGSQL_TRANSACTION_INTRANS;
 extern const int64 k_PGSQL_TRANSACTION_UNKNOWN;
 extern const int64 k_PGSQL_TUPLES_OK;
->>>>>>> db7b6ea941e37e2ad24433897ff04ae7a9c43859
 extern const int64 k_SQLITE3_ASSOC;
 extern const int64 k_SQLITE3_BLOB;
 extern const int64 k_SQLITE3_BOTH;
