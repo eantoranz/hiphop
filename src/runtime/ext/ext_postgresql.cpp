@@ -1013,7 +1013,7 @@ Variant f_pg_query_params(CVarRef connection, CStrRef query, CArrRef params) {
       PQclear(res);
       return NULL;
     }
-  Variant result = Object(NEW(PostgresqlResult)(res));
+  Variant result = Object(NEWOBJ(PostgresqlResult)(res));
   return result;
 }
 
@@ -1035,7 +1035,7 @@ Variant f_pg_query(CVarRef connection, CStrRef query) {
       PQclear(res);
       return NULL;
     }
-  Variant result = Object(NEW(PostgresqlResult)(res));
+  Variant result = Object(NEWOBJ(PostgresqlResult)(res));
   return result;
 }
 
